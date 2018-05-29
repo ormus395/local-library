@@ -1,3 +1,4 @@
+let bcrypt = require("bcryptjs");
 module.exports = (sequelize, DataTypes) => {
   let User = sequelize.define("User", {
     email: {
@@ -20,5 +21,20 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   User.associate = function(models) {};
+  User.beforeCreate((user, options) => {
+    return new Promise((resolve, reject) => {
+      bcrypt.genSalt(10, function(err, salt) {
+        if (err) {
+          reject(err);
+        } else {
+          bcrypt.hash(user.password, salt, function(err, hash) {
+            if (err) reject(err);
+            user.password = hash;
+            resolve();
+          });
+        }
+      });
+    });
+  });
   return User;
 };
