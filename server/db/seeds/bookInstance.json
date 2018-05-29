@@ -1,0 +1,12 @@
+[
+  {
+    "imprint": "bookSeller21",
+    "status": "Available",
+    "BookId": 1
+  },
+  {
+    "imprint": "twainLovers",
+    "status": "Maintenance",
+    "BookId": 2
+  }
+]

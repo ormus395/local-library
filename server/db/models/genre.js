@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Genre.associate = function(models) {
     // Figure out assocaition with books
-    models.Genre.belongsToMany(models.Book, { through: "Book_Genre" });
+    models.Genre.belongsTo(models.Book);
   };
 
   return Genre;

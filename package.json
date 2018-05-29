@@ -8,6 +8,7 @@
     "server": "nodemon server/server.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "node server/db/seeds/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

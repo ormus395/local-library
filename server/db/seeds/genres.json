@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Horror",
+    "BookId": 1
+  },
+  {
+    "name": "Satire",
+    "BookId": 2
+  }
+]

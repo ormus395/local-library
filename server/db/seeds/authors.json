@@ -1,0 +1,16 @@
+[
+  {
+    "first_name": "Stephen",
+    "family_name": "King",
+    "date_of_birth": "1947-09-21",
+    "date_of_death": null,
+    "name": "Stephen King"
+  },
+  {
+    "first_name": "Samuel",
+    "family_name": "Clemens",
+    "date_of_birth": "1835-11-30",
+    "date_of_death": "1910-04-21",
+    "name": "Mark Twain"
+  }
+]

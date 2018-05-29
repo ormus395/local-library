@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     models.Book.hasMany(models.BookInstance);
     // Need to figure out Genre association
-    models.Book.belongsToMany(models.Genre, { through: "Book_Genre" });
+    models.Book.hasMany(models.Genre);
   };
   return Book;
 };

@@ -1,0 +1,16 @@
+[
+  {
+    "title": "IT",
+    "summary":
+      "Welcome to Derry, Maine... It’s a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real ...They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But none of them can withstand the force that has drawn them back to Derry to face the nightmare without an end, and the evil without a name.",
+    "ISBN": " 978-3-16-148410-0",
+    "AuthorId": 1
+  },
+  {
+    "title": "Adventures of Tom Sawyer",
+    "summary":
+      "On the banks of the Mississippi River, Tom Sawyer and his friends seek out adventure at every turn. Then one fateful night in the graveyard they witness a murder. The boys make a blood oath never to reveal the secret, and they run away to be pirates in search of hidden treasure. But when Tom gets trapped in a cave with scary Injun Joe, can he escape unharmed? This Puffin Classic includes a behind-the-scenes journey, including an author profile, a guide to who's who, activities and more…",
+    "ISBN": "123-3-16-123456-0",
+    "AuthorId": 2
+  }
+]
