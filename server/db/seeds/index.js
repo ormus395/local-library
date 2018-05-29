@@ -4,6 +4,7 @@ const auhtorData = require("./authors.json");
 const bookData = require("./books.json");
 const genreData = require("./genres.json");
 const bookInstanceData = require("./bookInstance.json");
+const userData = require("./users.json");
 
 db.sequelizeInstance.sync({ force: true }).then(function() {
   Promise.all(
@@ -24,6 +25,11 @@ db.sequelizeInstance.sync({ force: true }).then(function() {
   Promise.all(
     bookInstanceData.map(instance => {
       db.BookInstance.create(instance);
+    })
+  );
+  Promise.all(
+    userData.map(user => {
+      db.User.create(user);
     })
   );
 });
