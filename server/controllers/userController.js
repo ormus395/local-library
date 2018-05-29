@@ -1,4 +1,4 @@
-const User = require("../db").User;
+const User = require("../db/models").User;
 
 module.exports = {
   get: (req, res) => {

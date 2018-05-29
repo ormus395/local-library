@@ -3,7 +3,7 @@ let router = express.Router(); // Creates router object, much like express app o
 let users = require("./api/users");
 let { genres, books, authors, bookInstance } = require("./api/catalog");
 
-router.use("/users", users);
 router.use("/catalog", [genres, books, authors, bookInstance]);
-
+router.use("/users", users);
+console.log(router.stack);
 module.exports = router;
