@@ -1,4 +1,4 @@
-import { FETCH_BOOKS } from "../constants";
+import { FETCH_BOOKS } from "../../constants";
 let initialState = {};
 
 export default function(state = initialState, action) {

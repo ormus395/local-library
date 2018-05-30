@@ -1,6 +1,10 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class Landing extends Component {
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
   render() {
     return (
       <div>
@@ -10,4 +14,10 @@ class Landing extends Component {
   }
 }
 
-export default Landing;
+const mapStateToProps = state => {
+  return {
+    auth: state.user
+  };
+};
+
+export default connect(mapStateToProps)(Landing);
