@@ -1,6 +1,7 @@
+const User = require("../db/models").User;
 module.exports = {
   login: (req, res) => {
-    res.send("Logged in");
+    res.redirect("/catalog");
   },
   logout: (req, res) => {
     req.logout();

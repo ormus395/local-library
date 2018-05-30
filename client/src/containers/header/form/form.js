@@ -15,29 +15,27 @@ class Form extends Component {
   render() {
     return (
       <div className="form">
-        <label>
-          Email
-          <input
-            type="email"
-            name="email"
-            onChange={this.handleChange}
-            value={this.state.email}
-          />
-        </label>
-        <label>
-          Password
-          <input
-            type="password"
-            name="password"
-            onChange={this.handleChange}
-            value={this.state.password}
-          />
-        </label>
-        <input
-          type="submit"
-          onClick={() => this.props.handleSubmit({ ...this.state })}
-          value={this.props.title}
-        />
+        <form onSubmit={() => this.props.handleSubmit({ ...this.state })}>
+          <label>
+            Email
+            <input
+              type="email"
+              name="email"
+              onChange={this.handleChange}
+              value={this.state.email}
+            />
+          </label>
+          <label>
+            Password
+            <input
+              type="password"
+              name="password"
+              onChange={this.handleChange}
+              value={this.state.password}
+            />
+          </label>
+          <input type="submit" value={this.props.title} />
+        </form>
       </div>
     );
   }
