@@ -12,10 +12,15 @@ class Form extends Component {
     });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.handleSubmit({ ...this.state });
+  };
+
   render() {
     return (
       <div className="form">
-        <form onSubmit={() => this.props.handleSubmit({ ...this.state })}>
+        <form action="/api/auth/login" method="POST">
           <label>
             Email
             <input
