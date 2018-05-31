@@ -12,15 +12,21 @@ class Form extends Component {
     });
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
-    this.props.handleSubmit({ ...this.state });
-  };
+  // handleSubmit = e => {
+  //   e.preventDefault();
+  //   this.props.handleSubmit({ ...this.state });
+  // };
 
   render() {
+    let action;
+    if (this.props.isLogin) {
+      action = "/api/auth/login";
+    } else {
+      action = "/api/users/create";
+    }
     return (
       <div className="form">
-        <form action="/api/auth/login" method="POST">
+        <form action={action} method="POST">
           <label>
             Email
             <input

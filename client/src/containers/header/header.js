@@ -6,7 +6,7 @@ import * as actions from "../../store/actions/authActions/auth";
 
 import Modal from "../../components/ui/modal/modal";
 import Form from "./form/form";
-
+console.log("I am actions,", actions.register);
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -27,7 +27,11 @@ class Header extends Component {
 
   handleSubmit = userData => {
     console.log(userData);
-    this.props.login(userData);
+    // if (this.state.isLogin) {
+    //   this.props.login(userData);
+    // } else {
+    console.log("REGISTER");
+    // }
   };
 
   renderContent() {
@@ -65,6 +69,7 @@ class Header extends Component {
               <Form
                 title={this.state.isLogin ? "Login" : "Register"}
                 handleSubmit={this.handleSubmit}
+                isLogin={this.state.isLogin}
               />
             </Modal>
           </main>

@@ -1,4 +1,4 @@
-import { FETCH_USER } from "../constants";
+import { FETCH_USER, REGISTER } from "../constants";
 import { LOGIN } from "../constants";
 
 export default function(state = null, action) {
