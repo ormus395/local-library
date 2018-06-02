@@ -70,17 +70,17 @@ class Carousel extends Component {
   render() {
     return (
       <div className="carousel">
-        <Arrow
+        {/* <Arrow
           direction="left"
           clickFunction={this.previousSlide}
           glyph="&#9664;"
-        />
+        /> */}
         <ImageSlide url={imgUrls[this.state.currentIndex]} />
-        <Arrow
+        {/* <Arrow
           direction="right"
           clickFunction={this.nextSlide}
           glyph="&#9654;"
-        />
+        /> */}
       </div>
     );
   }

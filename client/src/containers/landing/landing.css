@@ -1,0 +1,26 @@
+#main {
+  display: flex;
+}
+
+.sidebar {
+  background-color: #ccc;
+  padding: 20px;
+  margin: 10px;
+}
+
+.news {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.story {
+  display: flex;
+  background-color: #ccc;
+  padding: 20px;
+  margin: 10px;
+}
+
+.story img {
+  height: 100px;
+}
