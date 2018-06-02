@@ -14,6 +14,7 @@ class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      interval: null,
       currentIndex: 0
     };
   }
@@ -49,6 +50,23 @@ class Carousel extends Component {
       });
     }
   };
+
+  setLoop() {
+    this.state.interval = setInterval(this.nextSlide, 5000);
+  }
+
+  componentDidMount() {
+    this.setState(prevState => {
+      return {
+        interval: setInterval(this.nextSlide, 5000)
+      };
+    }, this.setLoop);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.interval);
+  }
+
   render() {
     return (
       <div className="carousel">
