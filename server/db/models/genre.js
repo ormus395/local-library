@@ -1,5 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
   let Genre = sequelize.define("Genre", {
+    GenreId: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     name: DataTypes.STRING,
     url: DataTypes.STRING
   });

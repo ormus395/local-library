@@ -1,5 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
   let BookInstance = sequelize.define("BookInstance", {
+    BookInstanceId: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     imprint: DataTypes.STRING,
     status: {
       type: DataTypes.ENUM,

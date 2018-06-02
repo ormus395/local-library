@@ -34,5 +34,28 @@ module.exports = {
   },
   update: (req, res) => {
     res.send("Update book");
+  },
+  handleSearch: (req, res) => {
+    let query = {};
+    // for(let prop in req.query) {
+    //   if(req.query.title) {
+    //     query[prop] = req.query[prop]
+    //   }
+    //   if(req.query.author) {
+
+    //   }
+    //   if(req.query.genre) {
+
+    //   }
+    // }
+    Book.findAll({
+      where: req.query
+    })
+      .then(books => {
+        res.json(books);
+      })
+      .catch(err => {
+        return next(err);
+      });
   }
 };

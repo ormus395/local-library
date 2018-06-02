@@ -1,5 +1,12 @@
+let slug = require("../../helpers").slug;
 module.exports = (sequelize, DataTypes) => {
   let Book = sequelize.define("Book", {
+    BookId: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
+    slug: DataTypes.STRING,
     title: DataTypes.STRING,
     summary: DataTypes.TEXT,
     ISBN: DataTypes.STRING,
@@ -17,5 +24,15 @@ module.exports = (sequelize, DataTypes) => {
     // Need to figure out Genre association
     models.Book.hasMany(models.Genre);
   };
+  Book.beforeCreate((book, options) => {
+    return new Promise((resolve, reject) => {
+      try {
+        book.slug = slug(book.title);
+        resolve();
+      } catch (err) {
+        reject(err);
+      }
+    });
+  });
   return Book;
 };

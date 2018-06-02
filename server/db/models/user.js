@@ -1,6 +1,11 @@
 let bcrypt = require("bcryptjs");
 module.exports = (sequelize, DataTypes) => {
   let User = sequelize.define("User", {
+    UserId: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     email: {
       type: DataTypes.STRING,
       validate: {
