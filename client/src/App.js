@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actions from "./store/actions/authActions/auth";
@@ -13,15 +14,17 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
-        <Header />
-        <div className="container">
-          <Switch>
-            <Route path="/" exact component={Landing} />
-            <Route path="/catalog" component={Catalog} />
-          </Switch>
+      <Router>
+        <div className="App">
+          <Header />
+          <div className="container">
+            <Switch>
+              <Route path="/" exact component={Landing} />
+              <Route path="/catalog" component={Catalog} />
+            </Switch>
+          </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }
